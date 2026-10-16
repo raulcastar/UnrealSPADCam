@@ -18,6 +18,10 @@ Unreal Engine 5.7 on Windows (the version it is developed and tested with).
 Building from source also needs Visual Studio 2022 with the *Game development
 with C++* workload.
 
+On the ROS side: ROS 2 Jazzy (Ubuntu 24.04), with GNC Moon Simulator's
+`component_spad_camera` node receiving the stream. The plugin itself has no ROS
+dependency: any program that reads the [wire format](docs/wire-format.md) can use it.
+
 ## Install
 
 - **Prebuilt (UE 5.7, Win64):** download `UnrealSPADCam-<version>-UE5.7-Win64.zip`
@@ -52,4 +56,7 @@ simulation time (its own copy of `GncSimTime.h`); add
 
 ## License
 
-[MIT](LICENSE), © 2026 Raul Castilla Arquillo.
+[MIT](LICENSE), © 2026 Raul Castilla Arquillo. The photon model it feeds (in
+GNC's `component_spad_camera`) is ported from
+[spadSim](https://github.com/drodriguezSRL/spadSim), MIT, © 2025 David
+Rodriguez-Martinez.
