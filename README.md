@@ -5,11 +5,12 @@ scene and streams grayscale frames to ROS over TCP, where the photon model runs.
 
 ![Camera image next to the SPAD frames](docs/images/spad.gif)
 
-*The rover driving in GNC Moon Simulator: the camera (left) and the SPAD
+*The rover driving in MARE: the camera (left) and the SPAD
 frames after the photon model (right).*
 
-Part of [GNC Moon Simulator](https://github.com/raulcastar/GNC-Moon-Simulator):
-its `component_spad_camera` node turns the frames into single-photon binary
+Part of [MARE](https://github.com/raulcastar/MARE-Lunar-Simulator), an open-source lunar rover
+simulation suite. In its ROS 2 stack,
+[GNC-Moon-Simulator](https://github.com/raulcastar/GNC-Moon-Simulator), the `component_spad_camera` node turns the frames into single-photon binary
 frames with [spadSim](https://github.com/drodriguezSRL/spadSim) (port 3006).
 
 ## Requirements
@@ -18,8 +19,8 @@ Unreal Engine 5.7 on Windows (the version it is developed and tested with).
 Building from source also needs Visual Studio 2022 with the *Game development
 with C++* workload.
 
-On the ROS side: ROS 2 Jazzy (Ubuntu 24.04), with GNC Moon Simulator's
-`component_spad_camera` node receiving the stream. The plugin itself has no ROS
+On the ROS side: ROS 2 Jazzy (Ubuntu 24.04), with the
+`component_spad_camera` node of GNC-Moon-Simulator receiving the stream. The plugin itself has no ROS
 dependency: any program that reads the [wire format](docs/wire-format.md) can use it.
 
 ## Install
